@@ -44,7 +44,7 @@ inputs:
 author: 'Yaarz'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/yaarz-io/action-slack-notify:v1.0.2'
+  image: 'docker://ghcr.io/yaarz-io/action-slack-notify:v1.0.3'
   args:
     - "-w"
     - ${{ inputs.web-hook-url }}
