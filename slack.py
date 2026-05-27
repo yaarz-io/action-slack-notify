@@ -66,6 +66,9 @@ if(REPOSITORY_URL is not None):
 		ACTION = ACTION.replace(hashtag,"<{0}/pull/{1}|{2}> ".format(REPOSITORY_URL,hashtag.strip('#'),hashtag))
 
 IMG_URL = "{}/{}?size=50".format(GITHUB_AVATAR_SERVER_URL,USER)
+urls = "<https://www.yaarz.io/signin|www.yaarz.io> - [prod front-end]\n<https://api.yaarz.io|api.yaarz.io> [prod backend-end]"
+if SCOPE == "staging":
+	urls = "<https://staging.yaarz.io/signin|staging.yaarz.io> - [staging front-end]\n<https://api.staging.yaarz.io|api.staging.yaarz.io> [staging backend-end]"
 
 ## function that gets the random quote
 def get_random_quote():
@@ -161,7 +164,7 @@ payload = {
 			"elements": [
 				{
 					"type": "mrkdwn",
-					"text": "This push triggers a *build on _google cloud_*. Next you will see *two build* status from GCP (Something like _Cloud Build [...] SUCCESS_) with it's success in *less than 10mn*.\n The last one is the App's build status."
+					"text": f"This push triggers a build on clever cloud. Here are the urls.\n{urls}"
 				}
 			]
 		},
