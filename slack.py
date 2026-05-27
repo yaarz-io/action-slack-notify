@@ -67,7 +67,7 @@ if(REPOSITORY_URL is not None):
 
 IMG_URL = "{}/{}?size=50".format(GITHUB_AVATAR_SERVER_URL,USER)
 urls = "<https://www.yaarz.io/signin|www.yaarz.io> - [prod front-end]\n<https://api.yaarz.io|api.yaarz.io> [prod backend-end]"
-if SCOPE == "staging":
+if "[staging]" in SCOPE:
 	urls = "<https://staging.yaarz.io/signin|staging.yaarz.io> - [staging front-end]\n<https://api.staging.yaarz.io|api.staging.yaarz.io> [staging backend-end]"
 
 ## function that gets the random quote
